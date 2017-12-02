@@ -7,5 +7,13 @@ class grad_guestbook {
         file = MODULES_DIRECTORY\grad-guestbook\functions;
 
         class addInteraction {};
+        class enableControls {};
+        class fillPages {};
+        class getUserMessageIDs {};
+        class initSaveTag {};
+        class onLoad {};
+        class openDialog {};
+        class save {};
+        class saveServer {};
     };
 };

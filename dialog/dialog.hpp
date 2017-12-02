@@ -8,8 +8,7 @@ class grad_guestbook_rscDisplayGuestbook {
     closeOnMissionEnd = 1;
     movingEnable = false;
     enableSimulation = true;
-    /*onLoad = "_this call compile preprocessFileLineNumbers 'manual\onLoad.sqf'";*/
-    /*onUnload = "_this call compile preprocessFileLineNumbers 'manual\onUnload.sqf'";*/
+    onLoad = "_this call grad_guestbook_fnc_onLoad";
 
     class controlsBackground {
         class notebook: grad_guestbook_rscPicture {
@@ -67,7 +66,9 @@ class grad_guestbook_rscDisplayGuestbook {
             maxChars = 600;
         };
 
-        class buttonLeft: grad_guestbook_rscButton {
+        class buttonLeft: grad_guestbook_rscButtonInvisible {
+            idc = GRAD_GUESTBOOK_IDCBUTTONL;
+
             x = grad_guestbook_buttonLX;
             y = grad_guestbook_textY;
             w = grad_guestbook_buttonW;
@@ -76,7 +77,9 @@ class grad_guestbook_rscDisplayGuestbook {
             text = "buttonL";
         };
 
-        class buttonRight: grad_guestbook_rscButton {
+        class buttonRight: grad_guestbook_rscButtonInvisible {
+            idc = GRAD_GUESTBOOK_IDCBUTTONR;
+
             x = grad_guestbook_buttonRX;
             y = grad_guestbook_textY;
             w = grad_guestbook_buttonW;
@@ -85,5 +88,50 @@ class grad_guestbook_rscDisplayGuestbook {
             text = "buttonR";
         };
 
+        class buttonSaveR: grad_guestbook_rscButton {
+            idc = GRAD_GUESTBOOK_IDCBUTTONSAVER;
+
+            x = grad_guestbook_buttonBotRX1;
+            y = grad_guestbook_buttonBotY;
+            w = grad_guestbook_buttonBotW;
+            h = grad_guestbook_itemH;
+
+            text = "SAVE";
+            onButtonClick = "_this call grad_guestbook_fnc_save";
+        };
+
+        class buttonSaveL: grad_guestbook_rscButton {
+            idc = GRAD_GUESTBOOK_IDCBUTTONSAVEL;
+
+            x = grad_guestbook_buttonBotLX1;
+            y = grad_guestbook_buttonBotY;
+            w = grad_guestbook_buttonBotW;
+            h = grad_guestbook_itemH;
+
+            text = "SAVE";
+            onButtonClick = "_this call grad_guestbook_fnc_save";
+        };
+
+        class buttonDeleteR: grad_guestbook_rscButton {
+            idc = GRAD_GUESTBOOK_IDCBUTTONDELETER;
+
+            x = grad_guestbook_buttonBotRX1;
+            y = grad_guestbook_buttonBotY;
+            w = grad_guestbook_buttonBotW;
+            h = grad_guestbook_itemH;
+
+            text = "DELETE";
+        };
+
+        class buttonDeleteL: grad_guestbook_rscButton {
+            idc = GRAD_GUESTBOOK_IDCBUTTONDELETEL;
+
+            x = grad_guestbook_buttonBotLX1;
+            y = grad_guestbook_buttonBotY;
+            w = grad_guestbook_buttonBotW;
+            h = grad_guestbook_itemH;
+
+            text = "DELETE";
+        };
     };
 };

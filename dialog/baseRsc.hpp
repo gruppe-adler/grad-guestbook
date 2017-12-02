@@ -41,7 +41,7 @@ class grad_guestbook_rscEdit: grad_guestbook_rscText {
 };
 
 
-class grad_guestbook_rscButton {
+class grad_guestbook_rscButtonInvisible {
     idc = -1;
     access = 0;
     type = CT_BUTTON;
@@ -68,4 +68,38 @@ class grad_guestbook_rscButton {
     soundPush[] = {"",0.1,1};
     soundClick[] = {"",0.1,1};
     soundEscape[] = {"",0.1,1};
+};
+
+class grad_guestbook_rscButton {
+	access = 0;
+	type = CT_BUTTON;
+	style = ST_RIGHT;
+	text = "";
+	colorText[] = {1,1,1,1};
+	colorDisabled[] = {1,1,1,0.1};
+	colorBackground[] = {0,0,0,0.8};
+	colorFocused[] = {1,1,1,0.5};
+	colorBackgroundActive[] = {1,1,1,0.8}; // hover
+	colorBackgroundDisabled[] = {0.3,0.3,0.3,1};
+	colorBackgroundFocused[] = {0,0,0,0.5};
+	colorShadow[] = {0,0,0,0};
+	colorBorder[] = {0,0,0,1};
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
+	animTextureDefault = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureNormal = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureDisabled = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\normal_ca.paa";
+	animTextureOver = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\over_ca.paa";
+	animTextureFocused = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\focus_ca.paa";
+	animTexturePressed = "\A3\ui_f\data\GUI\RscCommon\RscShortcutButton\down_ca.paa";
+	shadow = 0;
+	font = "RobotoCondensed";
+	sizeEx = 0.04;
+	offsetX = 0.003;
+	offsetY = 0.003;
+	offsetPressedX = 0.002;
+	offsetPressedY = 0.002;
+	borderSize = 0;
 };
