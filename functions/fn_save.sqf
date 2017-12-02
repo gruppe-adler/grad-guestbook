@@ -10,5 +10,6 @@ private _saveTag = _display getVariable ["saveTag",""];
 private _maxPagesUser = _display getVariable ["maxPagesUser",3];
 
 private _text = ctrlText _editCtrl;
+_editCtrl ctrlSetText "";
 
 [profileName,getPlayerUID player,_text,_saveTag,_maxPagesUser] remoteExec ["grad_guestbook_fnc_saveServer",2,false];

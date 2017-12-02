@@ -4,7 +4,7 @@
 #include "baseRsc.hpp"
 
 class grad_guestbook_rscDisplayGuestbook {
-    idd = -1;
+    idd = GRAD_GUESTBOOK_IDD;
     closeOnMissionEnd = 1;
     movingEnable = false;
     enableSimulation = true;
@@ -30,7 +30,7 @@ class grad_guestbook_rscDisplayGuestbook {
             w = grad_guestbook_textW;
             h = grad_guestbook_textH;
 
-            text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+            text = "ERROR LOADING DIALOG";
         };
 
         class editLeft: grad_guestbook_rscEdit {
@@ -52,7 +52,7 @@ class grad_guestbook_rscDisplayGuestbook {
             w = grad_guestbook_textW;
             h = grad_guestbook_textH;
 
-            text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+            text = "ERROR LOADING DIALOG";
         };
 
         class editRight: grad_guestbook_rscEdit {
@@ -75,6 +75,7 @@ class grad_guestbook_rscDisplayGuestbook {
             h = grad_guestbook_textH;
 
             text = "buttonL";
+            onButtonClick = "_this call grad_guestbook_fnc_onPageButton";
         };
 
         class buttonRight: grad_guestbook_rscButtonInvisible {
@@ -86,6 +87,7 @@ class grad_guestbook_rscDisplayGuestbook {
             h = grad_guestbook_textH;
 
             text = "buttonR";
+            onButtonClick = "_this call grad_guestbook_fnc_onPageButton";
         };
 
         class buttonSaveR: grad_guestbook_rscButton {
@@ -121,6 +123,7 @@ class grad_guestbook_rscDisplayGuestbook {
             h = grad_guestbook_itemH;
 
             text = "DELETE";
+            onButtonClick = "_this call grad_guestbook_fnc_delete";
         };
 
         class buttonDeleteL: grad_guestbook_rscButton {
@@ -132,6 +135,7 @@ class grad_guestbook_rscDisplayGuestbook {
             h = grad_guestbook_itemH;
 
             text = "DELETE";
+            onButtonClick = "_this call grad_guestbook_fnc_delete";
         };
     };
 };

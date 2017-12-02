@@ -5,7 +5,7 @@ Dialog and framework to write server-persistent messages into a guestbook. Users
 ## structure of data array (dev)
 [
     [
-        ["McDiod","76561198044320063","0","ASDASDASDASDASDASDASDASDASDASD"]
+        ["McDiod","76561198044320063",0,"ASDASDASDASDASDASDASDASDASDASD"]
     ],
     [
         ["76561198044320063",[0]]

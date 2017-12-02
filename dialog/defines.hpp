@@ -1,3 +1,4 @@
+#define GRAD_GUESTBOOK_IDD                      42500
 #define GRAD_GUESTBOOK_IDCTEXTL                 42501
 #define GRAD_GUESTBOOK_IDCTEXTR                 42502
 #define GRAD_GUESTBOOK_IDCEDITL                 42503
