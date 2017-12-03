@@ -10,9 +10,7 @@ private _onLoad = {
     _guestbookData = missionNamespace getVariable [_saveTag,[[],[]]];
     _display setVariable ["guestbookData",_guestbookData];
 
-    if ((count (_guestbookData select 0)) > 0) then {
-        [_display,0] call grad_guestbook_fnc_fillPages;
-    };
+    [_display,0] call grad_guestbook_fnc_fillPages;
 };
 
 private _waitUntil = {

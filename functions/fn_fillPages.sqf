@@ -49,6 +49,7 @@ private _dataL = _messageData param [_pageIDL,[]];
 private _dataR = _messageData param [_pageIDL + 1,[]];
 private _dataNext = _messageData param [_pageIDL + 2,[]];
 
+
 [_dataL,_editCtrlL,_textCtrlL,_buttonSaveL,_buttonDeleteL] call _fnc_fillPage;
 [_dataR,_editCtrlR,_textCtrlR,_buttonSaveR,_buttonDeleteR] call _fnc_fillPage;
 if (count _dataL == 0) then {
